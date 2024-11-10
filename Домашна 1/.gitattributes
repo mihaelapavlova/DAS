@@ -1,0 +1,6 @@
+* text=auto
+*.py linguist-language=Python
+
+*.png binary
+*.jpg binary
+*.pdf binary
