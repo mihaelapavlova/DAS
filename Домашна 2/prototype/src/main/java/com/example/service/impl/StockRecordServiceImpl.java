@@ -15,31 +15,31 @@ public class StockRecordServiceImpl implements StockRecordService {
 
     @Autowired
     public StockRecordServiceImpl(StockRecordRepository stockRecordRepository) {
-        this.stockRecordRepository = stockRecordRepository;  // Инициализација на repository
+        this.stockRecordRepository = stockRecordRepository;
     }
 
     @Override
     public List<StockRecord> getAllStockRecords() {
-        return stockRecordRepository.findAll();  // Враќа сите записи од базата
+        return stockRecordRepository.findAll();  
     }
 
     @Override
     public Optional<StockRecord> getStockRecordById(Long id) {
-        return stockRecordRepository.findById(id);  // Враќа запис според ID
+        return stockRecordRepository.findById(id); 
     }
 
     @Override
     public StockRecord saveStockRecord(StockRecord stockRecord) {
-        return stockRecordRepository.save(stockRecord);  // Спасува или ажурира запис
+        return stockRecordRepository.save(stockRecord); 
     }
 
     @Override
     public void deleteStockRecord(Long id) {
-        stockRecordRepository.deleteById(id);  // Брише запис според ID
+        stockRecordRepository.deleteById(id); 
     }
 
     @Override
     public List<StockRecord> findAllByStockCode(String stockCode) {
-        return stockRecordRepository.findByStockCode(stockCode);  // Пребарува записи според stockCode
+        return stockRecordRepository.findByStockCode(stockCode);  
     }
 }
