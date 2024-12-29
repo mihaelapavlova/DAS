@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Филтрирање на податоци</title>
+</head>
+<body>
+    <h1>Филтрирање на податоци</h1>
+    <form action="/filter" method="get">
+        <label for="stockCode">Код на издавач:</label>
+        <input type="text" id="stockCode" name="stockCode" required><br><br>
+
+        <label for="dateFrom">Датум од:</label>
+        <input type="text" id="dateFrom" name="dateFrom" placeholder="dd.mm.yyyy" required><br><br>
+
+        <label for="dateTo">Датум до:</label>
+        <input type="text" id="dateTo" name="dateTo" placeholder="dd.mm.yyyy" required><br><br>
+
+        <button type="submit">Филтрирај</button>
+    </form>
+</body>
+</html>
+
