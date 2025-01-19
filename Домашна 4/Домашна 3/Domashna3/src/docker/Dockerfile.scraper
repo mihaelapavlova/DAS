@@ -1,0 +1,15 @@
+#FROM ubuntu:latest
+#LABEL authors="Dragana"
+
+#ENTRYPOINT ["top", "-b"]
+
+# docker/Dockerfile.scraper
+FROM python:3.9-slim
+
+WORKDIR /app
+
+COPY scraper_service.py .
+
+RUN pip install -r requirements.txt
+
+CMD ["python", "scraper_service.py"]
